@@ -14,4 +14,9 @@ public class NavigateTo {
         return Task.where("Servicios page",
                 Open.browserOn().the(ServiciosPage.class));
     }
+    
+    public static Performable theCSSPage() {
+        return Task.where("CSS page",
+                Open.browserOn().the(CSSPage.class));
+    }
 }
