@@ -76,4 +76,20 @@ public class HomeSteps {
 				Ensure.that(Home.P).text().isNotEqualTo("Lorem Ipsum")
         );
 	}
+	
+	// HU13 Se revisa que la pagina home tiene css
+		@When("El {actor} accede a la pagina css desde chrome")
+		public void el_usuario_accede_a_la_pagina_css_desde_chrome(Actor actor) {
+			actor.wasAbleTo(
+	        		NavigateTo.theCSSPage()
+	        );
+		}
+		
+		@Then("al {actor} se le muestra la pagina css")
+		public void al_usuario_se_le_muestra_la_pagina_css(Actor actor) {
+			actor.attemptsTo(
+					Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://web-static.ivan-aa.repl.co/css/styles.css"),
+					Ensure.thatTheCurrentPage().title().isNotEqualTo("Not Found")
+	        );
+		}
 }

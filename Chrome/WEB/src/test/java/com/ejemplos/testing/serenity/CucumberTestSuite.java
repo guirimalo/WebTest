@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
         		"json:target/serenity-reports/HU13_14Total.json"
         },
         features = "src/test/resources/features",
-        tags = "@REQ_PROYEC-35"
+        tags = "@REQ_PROYEC-38"
 )
 public class CucumberTestSuite {}
