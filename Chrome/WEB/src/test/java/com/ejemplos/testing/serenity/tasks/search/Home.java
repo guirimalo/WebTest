@@ -16,4 +16,7 @@ public class Home {
     public static final Target P =
     		Target.the("texto").
     		locatedBy(".post-subtitle");
+    
+    public static final Target link1 =  
+    		Target.the("Link home").located(By.xpath("//html/body/nav/div/div/ul/li[1]/a"));
 }
